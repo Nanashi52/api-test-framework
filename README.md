@@ -1,39 +1,40 @@
 # API Test Framework
 
-Учебный проект — API-тестирование публичного REST API с использованием REST Assured и JUnit 5.
+Educational project for API testing of a public REST API using REST Assured and JUnit 5.
 
-## Стек
+## Stack
 
 - Java 17
 - REST Assured 5.4
 - JUnit 5
 - Hamcrest
+- Jackson
 - Maven
 
-## Тестируемый API
+## Tested API
 
-[JSONPlaceholder](https://jsonplaceholder.typicode.com/) — бесплатный фиктивный API для тестирования и прототипирования.
+[JSONPlaceholder](https://jsonplaceholder.typicode.com/) - free fake API for testing and prototyping.
 
-## Покрытие тестами
+## Test Coverage
 
-| Endpoint | Метод | Описание | Тестов |
-|----------|-------|----------|--------|
-| `/users` | GET | Список пользователей, фильтрация по id | 5 |
-| `/posts` | GET | Список постов, фильтрация по userId | 4 |
-| `/posts` | POST | Создание нового поста | 1 |
-| `/posts/{id}` | PUT | Обновление поста | 1 |
-| `/posts/{id}` | DELETE | Удаление поста | 1 |
+| Endpoint | Method | Description | Tests |
+|----------|--------|-------------|-------|
+| `/users` | GET | User list, filtering by id | 5 |
+| `/posts` | GET | Post list, filtering by userId | 4 |
+| `/posts` | POST | Create a new post | 1 |
+| `/posts/{id}` | PUT | Update a post | 1 |
+| `/posts/{id}` | DELETE | Delete a post | 1 |
 
-## Используемые подходы
+## Approaches Used
 
-- Валидация статус-кодов
-- Проверка структуры и значений JSON-ответа
-- Извлечение полей через `JsonPath` и `Response`
-- Фильтрация через query-параметры
-- CRUD-операции (POST, PUT, DELETE)
-- `@DisplayName` для читаемости отчётов
+- Status code validation
+- JSON response structure and value checks
+- Field extraction via `JsonPath` and `Response`
+- Filtering via query parameters
+- CRUD operations (POST, PUT, DELETE)
+- `@DisplayName` for readable test reports
 
-## Запуск
+## Run
 
 ```bash
 mvn test
